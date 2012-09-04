@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>:: Clube de Casa :: ALUGA-SE CASA NA PRAIA DO ICARAÍ POR TEMPORADA! </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Woody Landing, landing page design">
+    <meta name="author" content="">
+
+    <!-- styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/da-slider.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <script type="text/javascript" src="js/modernizr.custom.28468.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+        <!-- Google Web Font-->
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- fav icons -->
+    <link rel="shortcut icon" href="favicon.ico">
+</head>
+
+<body>
+
+<div class="head-map container-fluid custom-fluid-cont">
+    <div class="row-fluid">
+
+<iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&amp;msid=206467437214796973736.0004c8d926075a706f844&amp;ie=UTF8&amp;t=h&amp;ll=-3.676478,-38.662112&amp;spn=0.010278,0.013733&amp;z=16&amp;output=embed"></iframe>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="span4 offset1">
+            <h2>Pergunte algo...</h2><br />
+            <form id="contactform" class="form">
+                <label>Seu nome</label>
+                <input type="text" name="contactname" id="contactname" class="span4" placeholder="">
+                <label>Seu email</label>
+                <input type="text" value="" name="contactemail" class="span4 email" id="contactemail" placeholder="">
+                <label>Pergunta</label>
+                <textarea class="span4" id="contactmessage" name="contactmessage" rows="3" placeholder=""></textarea>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Enviar msg!</button>
+                </div>
+            </form>
+        </div>
+        <div class="span5 offset2">
+            <h2>Localizada em:</h2><br />
+            <address>
+                <i class="icon-home"></i><strong> StartupTheme, Inc.</strong><br />
+                795 Sea of Tranquility, Suite 600<br />
+                The Moon, MOON 94107<br /><br />
+                <i class="icon-phone"></i> (123) 456-7890<br />
+                <i class="icon-phone"></i> (123) 456-7890<br />
+                <i class="icon-phone"></i> (123) 456-7890<br /><br />
+                <i class="icon-envelope-alt"></i> <a href="mailto:#">email1@startuptheme.com</a><br />
+                <i class="icon-envelope-alt"></i> <a href="mailto:#">email2@startuptheme.com</a>
+            </address>
+            <h3>Keep in touch</h3><br />
+            <p><i class="icon-facebook-sign"></i> <a href="#">Facebook</a></p>
+            <p><i class="icon-twitter-sign"></i> <a href="#">Twitter</a></p>
+            <p><i class="icon-github-sign"></i> <a href="#">Github</a></p>
+            <p><i class="icon-google-plus-sign"></i> <a href="#">Google Plus</a></p>
+        </div>
+    </div><!-- /row -->
+    <br />
+</div><!-- /container -->
+
+
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/bootstrap-collapse.js"></script>
+<script type="text/javascript" src="js/bootstrap-tooltip.js"></script>
+<script src="js/jquery.cslider.js"></script>
+<script type="text/javascript">
+$('#da-slider').cslider({
+    current     : 0,
+    bgincrement : 50, // parallax
+    autoplay    : true,
+    interval    : 5000
+});
+$(document).ready(function(){
+    $("#form").validate({
+        rules: {
+            email: "required",
+        },
+        highlight: function(element, errClass) {
+            $(element).tooltip('show');
+        },
+        unhighlight: function(element, errClass) {
+            $(element).tooltip('hide');
+        },
+        errorPlacement: function(err, element) {
+            err.hide();
+        },
+    });
+    $("#email").tooltip({
+        placement: 'bottom',
+        trigger: 'manual',
+        title: 'Please insert a valid email address!',
+    });
+    $("#contactform").validate({
+        rules: {
+            contactname: "required",
+            contactemail: "required",
+            contactmessage: "required",
+        },
+        highlight: function(element, errClass) {
+            $(element).tooltip('show');
+        },
+        unhighlight: function(element, errClass) {
+            $(element).tooltip('hide');
+        },
+        errorPlacement: function(err, element) {
+            err.hide();
+        },
+    });
+    $("#contactemail").tooltip({
+        placement: 'bottom',
+        trigger: 'manual',
+        title: 'Please insert a valid email address!',
+    });
+    $("#contactname").tooltip({
+        placement: 'bottom',
+        trigger: 'manual',
+        title: 'Please insert your name!',
+    });
+    $("#contactmessage").tooltip({
+        placement: 'bottom',
+        trigger: 'manual',
+        title: 'Please insert your message!',
+    });
+});
+</script>
+
+</body>
+
+</html>
